@@ -397,6 +397,10 @@ Script para crear automáticamente archivos de contenido.
 Ejemplo:
 
 ```bash
+# Número inicial.
+start=0
+
+# Nombres de las secciones.
 names=(
     introduccion
     marco-teorico
@@ -404,13 +408,24 @@ names=(
     conclusiones
 )
 
-for i in "${!names[@]}"; do
-    number=$(printf "%02d" $((i + 1)))
-    touch "content/${number}-${names[$i]}.tex"
+# Recorre los nombres.
+for ((i=0; i<${#names[@]}; i++)); do
+
+    # Genera la numeración.
+    if (( start == 0 )); then
+        # Con 0, comienza desde 01.
+        number=$(printf "%02d" $((i + 1)))
+    else
+        # Con otro valor, comienza desde start + 1. Ej: start=3 → "04-archivo".tex.
+        number=$(printf "%02d" $((start + $((i + 1)))))
+    fi
+
+    # Crea el archivo.
+    touch "$PROJECT_ROOT/content/${number}-${names[$i]}.tex"
 done
 ```
 
-Para ejecutarlo:
+Para ejecutarlo en una terminal Linux:
 
 ```bash
 chmod +x scripts/create-content.sh
@@ -423,6 +438,15 @@ El script puede adaptarse para crear nuevas estructuras de capítulos, solo debe
     touch "content/${number}-${names[$i]}.tex"
 ```
 Y cambiar `content` por otra carpeta que se requiera.
+
+### `create-content.ps1`
+Para Windows es igual, pero con el archivo `.ps1`. Ingresar y editar el archivo según su conveniencia entre nombre y orden del valor del archivo, después de ejecutarlo de manera gráfica (clic derecho>Run Whit PowerShell) o por la terminal de PowerShell.
+
+Para ejecutar en PowerShell por CLI, ingresar a la carpeta `/scripts` y ejecutar:
+
+```powershell
+.\create-content.ps1
+```
 
 ---
 
