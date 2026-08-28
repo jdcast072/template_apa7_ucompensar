@@ -553,7 +553,9 @@ Si se utiliza `biblatex` con `biber`, es importante que el sistema de compilaci�
 
 ### Visual Studio Code
 
-En caso de usar Visual Studio Code, tener las herramientas de compilaci처n `StrawBerry Perl` y administraci처n de paquetes `Miktek Console`. En `settings.json` a nivel de usuario desde cualquier parte, respetando la sintaxis de JSON que no afecte otras extensiones evitando el punto anterior para la compilaci처n manual.
+En caso de usar Visual Studio Code, tener las herramientas de compilaci처n `StrawBerry Perl` y administraci처n de paquetes `Miktek Console` e instalar las extensiones de `LaTeX Workshop` y el soporte de lenguaje de `Latex`
+
+En `settings.json` a nivel de usuario desde cualquier parte, respetando la sintaxis de JSON que no afecte otras extensiones evitando el punto anterior para la compilaci처n manual.
 
 Agregar la siguiente configuraci처n para un compilado optimo, personal y sin limitaciones:
 
