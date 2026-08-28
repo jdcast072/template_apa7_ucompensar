@@ -1,0 +1,43 @@
+% Diseño de border y tabla de contenido
+\usetikzlibrary{calc} % Facilita cálculos de coordenadas en TikZ.
+
+%\hypersetup{hidelinks} % Configura los enlaces y referencias clicables del PDF. Se agrega en documenclass para mayor comodidad
+
+
+% No numerar los títulos según la estructura APA
+\setcounter{secnumdepth}{-1}
+
+% \setcounter{secnumdepth}{5} % Numeración de secciones
+
+% Profundidad en la tabla de contenido
+% \setcounter{tocdepth}{5}
+
+% Puntos de relleno entre el título de la entrada y el número de página
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Títulos
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}} % Subsecciones
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}} % Subsubsecciones
+
+% Eliminar negrilla únicamente en el contenido
+
+\renewcommand{\cftsecfont}{\normalfont} % Títulos
+\renewcommand{\cftsubsecfont}{\normalfont} % Subsecciones
+\renewcommand{\cftsubsubsecfont}{\normalfont} % Subsubsecciones
+
+% Eliminar negrilla de los números de página
+
+\renewcommand{\cftsecpagefont}{\normalfont} % Títulos
+\renewcommand{\cftsubsecpagefont}{\normalfont} % Subsecciones
+\renewcommand{\cftsubsubsecpagefont}{\normalfont} % Subsubsecciones
+
+
+% Centrar el título "Índice" sin someterlo al formato lateral de apa7.
+\renewcommand{\cfttoctitlefont}{%
+    \hfil
+    \bfseries
+}
+\renewcommand{\cftaftertoctitle}{}
+
+% Define el color naranja institucional.
+\definecolor{compensarOrange}{RGB}{255,102,22}
+% Define una variante clara del color institucional.
+\definecolor{compensarLight}{RGB}{255,190,150}

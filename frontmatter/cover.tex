@@ -1,0 +1,115 @@
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture,overlay]
+
+        % ========================================
+        % ESQUINA SUPERIOR IZQUIERDA
+        % ========================================
+        % ----------------------------------------
+        % FRANJA PRIMARIA
+        % ----------------------------------------
+
+        \fill[compensarOrange]
+        (current page.north west)
+
+        -- ($(current page.north west)+(9cm,0)$)
+
+        .. controls ($(current page.north west)+(6.5cm,-1.2cm)$)
+        and ($(current page.north west)+(2.2cm,-5.5cm)$)
+        .. ($(current page.north west)+(0,-11cm)$)
+
+        -- cycle;
+
+        % ----------------------------------------
+        % FRANJA CLARA / SOMBREADO
+        % ----------------------------------------
+
+        \fill[compensarLight, opacity=0.65]
+
+        % Curva exterior:
+        % coincide con el borde de la franja primaria
+        ($(current page.north west)+(9cm,0)$)
+
+        .. controls ($(current page.north west)+(6.5cm,-1.2cm)$)
+        and ($(current page.north west)+(2.2cm,-5.5cm)$)
+        .. ($(current page.north west)+(0,-11cm)$)
+
+        % Curva interior:
+        % desplazada hacia el centro de la página
+        -- ($(current page.north west)+(0,-8.5cm)$)
+
+        .. controls ($(current page.north west)+(2.5cm,-4.5cm)$)
+        and ($(current page.north west)+(6cm,-0.8cm)$)
+        .. ($(current page.north west)+(11cm,0)$)
+
+        -- cycle;
+
+        % ========================================
+        % ESQUINA INFERIOR DERECHA
+        % ========================================
+
+        % ----------------------------------------
+        % FRANJA PRIMARIA
+        % ----------------------------------------
+
+        \fill[compensarOrange]
+        (current page.south east)
+
+        -- ($(current page.south east)+(-9cm,0)$)
+
+        .. controls ($(current page.south east)+(-6.5cm,1.2cm)$)
+        and ($(current page.south east)+(-2.2cm,5.5cm)$)
+        .. ($(current page.south east)+(0,11cm)$)
+
+        -- cycle;
+
+        % ----------------------------------------
+        % FRANJA CLARA / SOMBREADO
+        % ----------------------------------------
+
+        \fill[compensarLight, opacity=0.65]
+
+        % Curva exterior:
+        % coincide con el borde de la franja primaria
+        ($(current page.south east)+(-9cm,0)$)
+
+        .. controls ($(current page.south east)+(-6.5cm,1.2cm)$)
+        and ($(current page.south east)+(-2.2cm,5.5cm)$)
+        .. ($(current page.south east)+(0,11cm)$)
+
+        % Curva interior:
+        % desplazada hacia el centro de la página
+        -- ($(current page.south east)+(0,8.5cm)$)
+
+        .. controls ($(current page.south east)+(-2.5cm,4.5cm)$)
+        and ($(current page.south east)+(-6cm,0.8cm)$)
+        .. ($(current page.south east)+(-11cm,0)$)
+
+        -- cycle;
+
+    \end{tikzpicture}
+
+    \centering
+    \vspace*{1cm}
+
+    \includegraphics[width=0.38\textwidth]{./assets/images/logo_ucompensar-2022.jpg}
+
+    \vspace{1.5cm}
+
+    {\large
+        Etapa de Contextualización \textendash{} Sistema de Gestión de Tareas
+        \par}
+    \vspace{1.5cm}
+    {\large Juan Diego Castañeda González
+        \par}
+    \vspace{1.5cm}
+    {\large Facultad de Ingeniería de Software \\ Fundación Universitaria Compensar
+        \par}
+    \vspace{1.5cm}
+    {\large 2310\textendash{}9A. Diseño de Software
+        \par}
+    \vspace{1.5cm}
+
+    {\large Docente. Nombre-Docente\par}
+    \vspace{1.5cm}
+    {\large \today \par}
+\end{titlepage}
