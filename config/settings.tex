@@ -16,6 +16,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Títulos
 \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}} % Subsecciones
 \renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}} % Subsubsecciones
+\captionsetup[figure]{position=bottom} % Posición de las leyendas abajo de las figuras
 
 % Eliminar negrilla únicamente en el contenido
 
@@ -41,3 +42,6 @@
 \definecolor{compensarOrange}{RGB}{255,102,22}
 % Define una variante clara del color institucional.
 \definecolor{compensarLight}{RGB}{255,190,150}
+
+% Evita que LaTeX estire verticalmente los espacios para llenar la página.
+\raggedbottom
