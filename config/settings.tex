@@ -41,3 +41,24 @@
 \definecolor{compensarOrange}{RGB}{255,102,22}
 % Define una variante clara del color institucional.
 \definecolor{compensarLight}{RGB}{255,190,150}
+
+% Callout
+\newtcolorbox{callout}[1][]{
+    enhanced,
+    breakable,
+    colback=gray!5,
+    colframe=gray!60,
+    boxrule=0.5pt,
+    arc=2mm,
+    left=3mm,
+    right=3mm,
+    top=2mm,
+    bottom=2mm,
+    before skip=10pt,
+    after skip=10pt,
+    #1
+}
+
+\addto\captionsspanish{%
+    \renewcommand{\tablename}{Tabla}%
+}

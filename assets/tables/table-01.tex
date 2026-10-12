@@ -1,53 +1,45 @@
-% ============================================
-% TABLA 1
-% TABLA CORTA O CON POCA INFORMACIÓN
-% ============================================
-
-\begin{table}[htbp]
-    \centering
-
-    % Número de tabla
-    \refstepcounter{table}\label{tab:intervalo-edades}
-    \textbf{Tabla \thetable}
-
-    \vspace{0.5\baselineskip}
-
-    % Título de la tabla
-    \textit{Ejemplo de tabla corta o con poca información}
-
-    \vspace{0.5\baselineskip}
-
-    \begin{tabular}{lccc}
+\begin{table}[H]
+    \caption{Variables e indicadores propuestos}
+    \label{tab:variables-indicadores}
+    \begin{tabularx}{\textwidth}{
+        >{\raggedright\arraybackslash}p{0.23\textwidth}
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}p{0.19\textwidth}
+    }
         \toprule
-
-        & \multicolumn{2}{c}{Género} & \\
-
-        \cmidrule(lr){2-3}
-
-        Intervalo de edades & F & M & Frecuencia \\
-
+        \textbf{Variable} &
+        \textbf{Indicador / operacionalización} &
+        \textbf{Tipo de dato} \\
         \midrule
 
-        1 a 2 años & 23 & 19 & 3 años \\
+        Herramientas utilizadas &
+        Categorías seleccionadas: LMS, buscadores, ofimática, videoconferencia, colaboración, IA y otras. &
+        Categórica múltiple \\
 
-        3 a 4 años & 31 & 27 & 2 años \\
+        Frecuencia de uso &
+        Nunca, rara vez, semanal, varias veces por semana, diariamente. &
+        Ordinal \\
 
-        5 a 6 años & 38 & 33 & 1 año \\
+        Finalidad académica &
+        Consultar fuentes, redactar, practicar, comunicarse, organizar tareas y crear contenidos. &
+        Categórica múltiple \\
 
-        7 a 8 años & 51 & 48 & 1 año \\
+        Utilidad percibida &
+        Escala de respuesta de 1 a 5, de nada útil a muy útil. &
+        Ordinal \\
 
+        Dificultades reportadas &
+        Conectividad, dispositivo, costo, habilidades, accesibilidad, privacidad y otras. &
+        Categórica múltiple \\
+
+        Características académicas &
+        Nivel de formación, modalidad y semestre o periodo (opcional). &
+        Categórica / ordinal \\
         \bottomrule
-    \end{tabular}
+    \end{tabularx}
 
-    \vspace{0.5\baselineskip}
-
-    \begin{flushleft}
-        \textit{Nota.}
-        Esta tabla muestra el intervalo de años y géneros
-        encontrados en el estudio de caso realizado por el
-        proyecto de estructura.
-
-        \textit{Fuente.} Autor.
-    \end{flushleft}
-
+    \begin{minipage}{\textwidth}
+        \footnotesize
+        \textit{Nota.} Las categorías son una propuesta inicial; deben revisarse mediante juicio experto y prueba piloto antes de la aplicación definitiva.
+    \end{minipage}
 \end{table}

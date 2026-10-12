@@ -1,0 +1,61 @@
+
+\begin{figure}[H]
+    \caption{Delimitación contextual del estudio}
+    \label{fig:delimitacion-contextual}
+
+    \centering
+
+    \begin{tikzpicture}[
+        bloque/.style={
+            draw=black!60,
+            rounded corners=2pt,
+            align=center,
+            text width=5cm,
+            minimum height=1.15cm,
+            inner sep=8pt,
+            font=\small
+        },
+        flecha/.style={
+            -{Stealth[length=2.5mm]},
+            thick,
+            black!65
+        }
+    ]
+
+        % Delimitación geográfica y poblacional
+        \node[bloque] (ciudad) {
+            \textbf{Bogotá, D. C.}
+        };
+
+        \node[bloque, below=0.35cm of ciudad] (instituciones) {
+            Instituciones de educación superior
+        };
+
+        \node[bloque, below=0.35cm of instituciones] (poblacion) {
+            Población propuesta: estudiantes de 18 años o más
+        };
+
+        % Objeto de estudio
+        \node[
+            bloque,
+            text width=4.2cm,
+            minimum height=2.2cm,
+            right=1.3cm of instituciones
+        ] (objeto) {
+            \textbf{Objeto de estudio}\\[4pt]
+            Herramientas digitales para fines académicos
+        };
+
+        % Relaciones conceptuales
+        \draw[flecha] (ciudad) -- (instituciones);
+        \draw[flecha] (instituciones) -- (poblacion);
+        \draw[flecha] (instituciones.east) -- (objeto.west);
+
+    \end{tikzpicture}
+
+    \par\smallskip
+    \begin{minipage}{0.9\textwidth}
+        \footnotesize
+        \textit{Nota.} Esquema conceptual de delimitación, no mapa cartográfico ni representación de la ubicación exacta de instituciones.
+    \end{minipage}
+\end{figure}

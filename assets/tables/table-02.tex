@@ -1,44 +1,43 @@
-\begin{table}[htbp]
-    \centering
 
-    % Número de tabla
-    \textbf{Tabla \refstepcounter{table}\thetable}\label{tab:ejemplo-estructura}
+\subsection{Anexo breve: ejemplo de preguntas para el cuestionario}
 
-    \vspace{0.5\baselineskip}
+\begin{table}[H]
+    \caption{Ejemplo de preguntas para el cuestionario}
+    \label{tab:preguntas-cuestionario}
 
-    % Título de la tabla
-    \textit{El título debe ser breve y descriptivo}
+    \small
+    \renewcommand{\arraystretch}{1.3}
 
-    \vspace{0.5\baselineskip}
-
-    \begin{tabular}{ll}
+    \begin{tabularx}{\textwidth}{
+        >{\raggedright\arraybackslash}p{0.22\textwidth}
+        >{\raggedright\arraybackslash}X
+    }
         \toprule
-
-        Columna uno        & Columna dos        \\
-
+        \textbf{Dimensión} &
+        \textbf{Pregunta propuesta} \\
         \midrule
 
-        Número de la tabla & Título de la tabla \\
+        Herramientas &
+        ¿Cuáles de estas herramientas utiliza para estudiar? (Marque todas las que correspondan). \\
 
-        Encabezado         & Datos de la tabla  \\
+        Frecuencia &
+        En las últimas cuatro semanas, ¿con qué frecuencia utilizó herramientas digitales para actividades académicas? \\
 
-        Datos de la tabla  & Datos de la tabla  \\
+        Finalidad &
+        ¿Para qué actividades las utiliza principalmente? \\
 
-        Datos de la tabla  & Datos de la tabla  \\
+        Utilidad &
+        En una escala de 1 a 5, ¿qué tan útiles le resultan para completar sus tareas académicas? \\
 
-        Datos de la tabla  & Datos de la tabla  \\
-
-        Datos de la tabla  & Datos de la tabla  \\
+        Dificultades &
+        ¿Qué dificultades encuentra al utilizarlas? (Puede seleccionar varias). \\
 
         \bottomrule
-    \end{tabular}
+    \end{tabularx}
 
-    \vspace{0.5\baselineskip}
-
-    \begin{flushleft}
-        \textit{Nota.}
-        Se hace una descripción del contenido de la tabla en
-        función de la información que se esté exponiendo.
-    \end{flushleft}
-
+    \vspace{2mm}
+    \begin{minipage}{\textwidth}
+        \footnotesize
+        \textit{Nota.} Estas preguntas son ejemplos iniciales, no un instrumento validado. Deben revisarse y pilotearse antes de su uso.
+    \end{minipage}
 \end{table}

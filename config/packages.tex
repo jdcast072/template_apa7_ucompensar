@@ -8,15 +8,22 @@
 \usepackage{graphicx} % Permite insertar y ajustar imágenes.
 \usepackage{booktabs} % Crea tablas con formato profesional.
 \usepackage{bookmark} % Mejora la generación de marcadores PDF.
+
+\usepackage{float}
 \usepackage{amsmath} % Añade herramientas para fórmulas matemáticas.
+\usepackage{multicol}
 \usepackage[
     backend=biber,
-    style=apa
+    style=apa,
+    sorting=nyt
 ]{biblatex} % Gestiona las referencias bibliográficas en formato APA.
-
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[most]{tcolorbox} % Paquete para callouts
 % Paquetes de diseño y formato
 \usepackage{xcolor} % Permite definir y usar colores personalizados.
 \usepackage{tikz} % Permite crear gráficos y formas vectoriales.
+\usetikzlibrary{arrows.meta, positioning}
 \usepackage{tocloft}[v=2]
 
 % Carga el archivo de referencias bibliográficas.

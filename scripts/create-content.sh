@@ -4,12 +4,14 @@
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Número inicial.
-start=3
+start=4
 
 # Nombres de las secciones.
 names=(
-    tecnicas-levantamiento
-    analisis-beneficios
+    diseno_metodologico
+    tecnicas_analisis
+    marco_referencial
+    conclusiones
 )
 
 # Crea el directorio si no existe.
